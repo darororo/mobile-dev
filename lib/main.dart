@@ -37,7 +37,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   Future<void> _launchInBrowser(Uri url) async {
-    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+    if (!await launchUrl(url, mode: LaunchMode.platformDefault)) {
       throw Exception('Could not launch $url');
     }
   }
@@ -120,14 +120,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             backgroundColor: Colors.blueAccent,
                             foregroundColor: Colors.white,
                           ),
-                          onPressed:
-                              () => setState(
-                                () => _launchInBrowser(
-                                  Uri.parse(
-                                    'https://www.facebook.com/daro.yem9/',
-                                  ),
-                                ),
-                              ),
+                          onPressed: () {
+                            _launchInBrowser(
+                              Uri.parse("https://www.instagram.com/yemdarowo/"),
+                            );
+                          },
                           child: Text(
                             'Hire me',
                             style: TextStyle(fontWeight: FontWeight.w600),
@@ -147,7 +144,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             backgroundColor: Colors.white,
                             foregroundColor: Colors.blueAccent,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            _launchInBrowser(
+                              Uri.parse("https://github.com/darororo"),
+                            );
+                          },
                           child: RichText(
                             text: TextSpan(
                               children: [
