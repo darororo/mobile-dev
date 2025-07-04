@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tp4/widgets/bottom_nav.dart';
-import 'package:flutter_tp4/widgets/feature_course_section.dart';
+import 'package:flutter_tp4/widgets/course/course_card.dart';
+import 'package:flutter_tp4/widgets/course/feature_course_section.dart';
 import 'package:flutter_tp4/widgets/hero_section.dart';
 import 'package:flutter_tp4/widgets/learning_feature_section.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Bruh',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
@@ -39,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
         backgroundColor: Colors.white,
         leading: Image.asset('assets/logo_title.png'),
         leadingWidth: MediaQuery.sizeOf(context).width * 0.4,
@@ -68,19 +71,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         const HeroSection(),
                         const SizedBox(height: 24),
                         const LearningFeatureSection(),
+                        const SizedBox(height: 20),
+                        const FeatureCourseSection(),
                       ],
                     ),
                   ),
                 ),
 
-                const SizedBox(height: 20),
-                const Text(
-                  'Featured Course',
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 24),
-                ),
-                const SizedBox(height: 8),
-
-                FeatureCourseSection(),
                 SizedBox(height: 100),
               ],
             ),
