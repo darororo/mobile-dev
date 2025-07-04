@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tp4/widgets/bottom_nav.dart';
 import 'package:flutter_tp4/widgets/course/course_card.dart';
 import 'package:flutter_tp4/widgets/course/feature_course_section.dart';
+import 'package:flutter_tp4/widgets/footer_section.dart';
 import 'package:flutter_tp4/widgets/hero_section.dart';
+import 'package:flutter_tp4/widgets/learn_more/learn_more_section.dart';
 import 'package:flutter_tp4/widgets/learning_feature_section.dart';
 import 'package:flutter_tp4/widgets/list_teachers.dart';
 
@@ -83,14 +85,18 @@ class _MyHomePageState extends State<MyHomePage> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 12),
+                        const SizedBox(height: 12),
                         const ListTeachers(),
+                        const SizedBox(height: 40),
+                        const LearnMoreSection(),
+                        const SizedBox(height: 20),
+                        const FooterSection(),
                       ],
                     ),
                   ),
                 ),
 
-                SizedBox(height: 100),
+                SizedBox(height: 80),
               ],
             ),
             // Bottom Bar

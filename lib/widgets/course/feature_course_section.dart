@@ -24,7 +24,8 @@ class FeatureCourseSection extends StatelessWidget {
         // Course List
         _buildCourseList(context),
         _buildCourseList(context),
-        SizedBox(height: 12),
+
+        const SizedBox(height: 16),
         _buildCircleIndicator(context),
       ],
     );
