@@ -4,6 +4,7 @@ import 'package:flutter_tp4/widgets/course/course_card.dart';
 import 'package:flutter_tp4/widgets/course/feature_course_section.dart';
 import 'package:flutter_tp4/widgets/hero_section.dart';
 import 'package:flutter_tp4/widgets/learning_feature_section.dart';
+import 'package:flutter_tp4/widgets/list_teachers.dart';
 
 void main() {
   runApp(const MyApp());
@@ -73,6 +74,17 @@ class _MyHomePageState extends State<MyHomePage> {
                         const LearningFeatureSection(),
                         const SizedBox(height: 20),
                         const FeatureCourseSection(),
+                        const SizedBox(height: 32),
+
+                        const Text(
+                          'Meet Our Teachers',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 12),
+                        const ListTeachers(),
                       ],
                     ),
                   ),
