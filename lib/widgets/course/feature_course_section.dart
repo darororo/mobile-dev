@@ -3,26 +3,25 @@ import 'package:flutter_tp4/widgets/course/course_card.dart';
 import 'package:flutter_tp4/widgets/tab/feature_course_tab.dart';
 
 class FeatureCourseSection extends StatelessWidget {
-  const FeatureCourseSection({super.key});
+  const FeatureCourseSection({super.key, required this.title});
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Row(
+        Row(
           children: [
             Text(
-              'Featured Course',
+              title,
               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 24),
             ),
           ],
         ),
         const SizedBox(height: 10),
-        const FeatureCourseTab(),
-        const SizedBox(height: 10),
 
         // Course List
-        _buildCourseList(context),
         _buildCourseList(context),
 
         const SizedBox(height: 16),
